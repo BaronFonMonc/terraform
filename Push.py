@@ -10,7 +10,7 @@ conn = MySQLdb.connect(
       ssl={'ca': '~/.mysql/root.crt'})
 
 cur = conn.cursor()
-cur.execute('CREATE TABLE CLIENT ( ID INT(11) PRIMARY KEY NOT NULL AUTO_INCREMENT );')
+cur.execute('INSERT INTO CLIENT (ID) VALUES (8)')
 
 
 print("Current version is:" + cur.fetchone()[0])
