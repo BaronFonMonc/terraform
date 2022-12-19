@@ -5,7 +5,7 @@ conn = MySQLdb.connect(
       port=3306,
       db="db1",
       user="user1",
-      passwd="<user password>",
+      passwd="user1user1",
       ssl={'ca': '~/.mysql/root.crt'})
 
 cur = conn.cursor()
