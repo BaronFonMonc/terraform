@@ -1,4 +1,8 @@
 import MySQLdb
+from flask import Flask
+
+app = Flask(__name__)
+
 
 conn = MySQLdb.connect(
       host="rc1b-8xtt6v6j6v24qm6v.mdb.yandexcloud.net",
@@ -13,6 +17,14 @@ cur.execute('SELECT version()')
 
 print(cur.fetchone()[0])
 
-print("Hello, world!")
-
 conn.close()
+
+@app.route('/')
+def hello():
+    cur = conn.cursor()
+    cur.execute('SELECT version()')
+
+    s = cur.fetchone()[0]
+
+    conn.close()
+    return s
