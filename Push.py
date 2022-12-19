@@ -11,7 +11,7 @@ conn = MySQLdb.connect(
 
 cur = conn.cursor()
 cur.execute('CREATE TABLE CLIENT ( ID INT(11) PRIMARY KEY NOT NULL AUTO_INCREMENT );')
-cur.execute('')
+
 
 print("Current version is:" + cur.fetchone()[0])
 

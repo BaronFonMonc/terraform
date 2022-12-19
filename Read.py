@@ -9,7 +9,7 @@ conn = MySQLdb.connect(
       ssl={'ca': '~/.mysql/root.crt'})
 
 cur = conn.cursor()
-cur.execute('SELECT * FROM clients')
+cur.execute('SELECT * FROM client')
 
 print("Clients are:" + cur.fetchone()[0])
 
