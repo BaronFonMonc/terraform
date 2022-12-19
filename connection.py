@@ -13,4 +13,6 @@ cur.execute('SELECT version()')
 
 print(cur.fetchone()[0])
 
+print("Hello, world!")
+
 conn.close()
