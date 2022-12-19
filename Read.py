@@ -11,6 +11,6 @@ conn = MySQLdb.connect(
 cur = conn.cursor()
 cur.execute('SELECT * FROM CLIENT')
 
-print("Clients are:" + cur.fetchone()[0])
+print("Clients are :" + cur.fetchone()[0])
 
 conn.close()

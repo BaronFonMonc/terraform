@@ -12,7 +12,5 @@ conn = MySQLdb.connect(
 cur = conn.cursor()
 cur.execute('INSERT INTO CLIENT (ID) VALUES (8)')
 
-
-print("Current version is:" + cur.fetchone()[0])
-
+print("Success")
 conn.close()
