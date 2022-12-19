@@ -9,8 +9,8 @@ conn = MySQLdb.connect(
       ssl={'ca': '~/.mysql/root.crt'})
 
 cur = conn.cursor()
-cur.execute('SELECT version()')
+cur.execute('SELECT * FROM clients')
 
-print("Current version is:" + cur.fetchone()[0])
+print("Clients are:" + cur.fetchone()[0])
 
 conn.close()
