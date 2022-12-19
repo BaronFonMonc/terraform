@@ -13,10 +13,6 @@ cur.execute('SELECT version()')
 
 print(cur.fetchone()[0])
 
-<<<<<<< HEAD
 print("Hello, world!")
 
 conn.close()
-=======
-conn.close()
->>>>>>> 237a99514a9a1401a0c9b57448a1a7e340fbe601
